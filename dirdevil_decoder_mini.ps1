@@ -8,3 +8,12 @@ foreach ($f in $(Get-ChildItem -Path $a -Directory)) {
 $e = [regex]::Matches($b, '..') | % { [Convert]::ToByte($_.Value, 16) }
 $g = "$($a.Path)\decoded_output.txt"
 Set-Content -Path $g -Value $e -Encoding Byte 
+
+# REFERENCE:
+# a = rootDirectory
+# b = decoder_hex_string
+# c = deepestSubFolder
+# d = truncated_output
+# e = decoded_bytes
+# f = folder
+# g = outputpath 
